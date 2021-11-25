@@ -8,16 +8,23 @@ namespace CofffeeLovers.Models
 {
     public class Products
     {
-        [Required]
+        enum Catergories { Toastie, Coffee, Tea, Desert, Crisps, }
+
+        [Required, StringLength(maximumLength:20)]
         public string ProductName { get; set; }
+
         [Required]
         public string Description { get; set; }
+
         [Required]
         public int Column { get; set; }
+
         [Required]
         public decimal Price { get; set; }
+
         [Required]
-        public int Category { get; set; }
+        public Catergories Catagory { get; set; } = Catergories.Tea;
+
         [Required]
         public int SupplierID { get; set; }
     }

@@ -8,12 +8,15 @@ namespace CofffeeLovers.Models
 {
     public class Order
     {
-        [Required]
+        [Required, Range(minimum: 1, maximum: 100)]
         public int ID { get; set; }
-        [Required]
+
+        [Required, Range(minimum: 1, maximum: 20)]
         public int TableNo { get; set; }
+
         [Required]
         public DateTime TimeRecieved { get; set; }
+
         [Required]
         public DateTime Timestamp { get; set; }
     }

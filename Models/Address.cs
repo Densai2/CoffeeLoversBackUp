@@ -10,13 +10,19 @@ namespace CofffeeLovers.Models
     {
         [Required]
         public int AddressID { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 30)]
         public string Line1Address { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 15)]
         public string City { get; set; }
+
+        [StringLength(maximumLength: 30)]
         public string Line2Address { get; set; }
+
         public int AddressID2 { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 7)]
         public string Postcode { get; set; }
     }
 }

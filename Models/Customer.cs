@@ -8,19 +8,25 @@ namespace CofffeeLovers.Models
 {
     public class Customer
     {
-        [Required]
+        [Required, StringLength(maximumLength: 15)]
         public string FirstName { get; set; }
+
         [Required]
         public int ID { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 15)]
         public string LastName { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 30)]
         public string Email { get; set; }
+
         [Required]
         public DateTime Date { get; set; }
+
         [Required]
         public Boolean UnderAge { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 30)]
         public string Address { get; set; }
     }
 }

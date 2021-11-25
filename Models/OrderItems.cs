@@ -10,7 +10,8 @@ namespace CofffeeLovers.Models
     {
         [Required]
         public decimal Price { get; set; }
-        [Required]
+
+        [Required, Range(minimum: 1, maximum:6)]
         public int Quantity { get; set; }
     }
 }

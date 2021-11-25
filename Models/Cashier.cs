@@ -8,17 +8,22 @@ namespace CofffeeLovers.Models
 {
     public class Cashier
     {
-        [Required]
+        [Required, StringLength(maximumLength: 10)]
         public int OrderItemsOrderID { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 10)]
         public int OrderItemsProductsID { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 3)]
         public int StaffID { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 15)]
         public string FirstName { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 15)]
         public string LastName { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 30)]
         public string Email { get; set; }
     }
 }

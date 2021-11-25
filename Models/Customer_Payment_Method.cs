@@ -10,12 +10,16 @@ namespace CofffeeLovers.Models
     {
         [Required]
         public int PaymentMethodCode { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 16)]
         public int CardNumber { get; set; }
+
         [Required]
         public DateTime DateOfPurcahse { get; set; }
+
         [Required]
         public Decimal Total { get; set; }
+
         [Required]
         public int BillNumber { get; set; }
     }

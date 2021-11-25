@@ -8,11 +8,13 @@ namespace CofffeeLovers.Models
 {
     public class Supplier
     {
-        [Required]
+        [Required, StringLength(maximumLength: 15)]
         public String Name { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 10)]
         public decimal Contact { get; set; }
-        [Required]
+
+        [Required, StringLength(maximumLength: 30)]
         public String Email { get; set; }
     }
 }
